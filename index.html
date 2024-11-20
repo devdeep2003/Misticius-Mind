@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revolutionize Contract Management</title>
+    <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
+  </head>
+
+    <body>
+
+      <nav class="navbar">
+        <div class="navbar-container">
+          <!-- Logo -->
+          <div class="logo">
+            <a href="#">
+              <img class="logo-image" src="./Assets/logo.png" alt="Logo" />
+            </a>
+          </div>
+      
+          <!-- Navigation Buttons -->
+          <div class="nav-buttons">
+            <div id="root"></div>
+            <!--<button class="login-btn">Login</button>
+            <button class="trial-btn">Start Free Trial <span class="arrow">→</span></button> --> 
+          </div> 
+        </div>
+      </nav>
+      
+      <!-- Add data-bs-interval for automatic sliding and carousel-fade class for fade effect -->
+      <div id="carouselBanner" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+      
+        <div class="carousel-inner" >
+          <div class="carousel-item active">
+            <div class="banner-container" style="background-image: linear-gradient(to right, rgba(107, 70, 193, 0.5), rgba(237, 137, 54, 0.5)), url('./Assets/banner1.jpeg'); background-size: cover;">
+              <h1>Revolutionize Contract Management with AI-Powered Precision</h1>
+              <p>AI-driven solutions to handle contracts like never before</p>
+              <button class="gradient-button">Get Started</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="banner-container" style="background-image: linear-gradient(to right, rgba(107, 70, 193, 0.5), rgba(237, 137, 54, 0.5)), url('./Assets/banner2.jpeg');">
+              <h1>Experience the Future of Contract Management</h1>
+              <p>Unlock the power of AI to streamline your business processes</p>
+              <!-- Replace the existing carousel buttons with these -->
+              <!-- Replace the carousel button with this -->
+              <button class="gradient-button">Learn More</button>
+            </div>
+          </div>
+        </div>
+      
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+          <span class="carousel-control-prev-icon-wrapper" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24" fill="currentColor">
+              <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+          </span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+          <span class="carousel-control-next-icon visually-hidden" aria-hidden="true"></span>
+          <span class="carousel-control-next-icon-wrapper" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24" fill="currentColor">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      
+      <section class="features">
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="content-section">
+              <h3>Contract Genius AI</h3>
+              <h4>Making Contracts Actionable</h4>
+              <p>Imagine the potential in undigitized contract data, a goldmine for boosting sales. The challenge is accessing and utilizing critical information due to its original, undigested form. Current solutions fall short in extracting and making valuable terms actionable.</p>
+              <div class="button-group">
+                <a href="#" class="link-button">Learn More</a>
+                <a href="#" class="link-button">
+                  <span class="play-icon">▶</span> Watch a Demo
+                </a>
+              </div>
+              <button class="trial-button">START A FREE TRIAL <span class="arrow">→</span></button>
+            </div>
+            <div class="image-section">
+              <img src="./Assets/image1.png" alt="Contract Genius AI" />
+            </div>
+        </div>
+      
+          <div class="feature-card">
+            <div class="image-section">
+              <img src="./Assets/image2.png" alt="Contract Genius AI" />
+            </div>
+            <div class="content-section">
+              <h3>Query Genius AI</h3>
+              <h4>Intelligent Query Handling for Instant, Accurate Responses</h4>
+              <p>Unlock valuable data hidden in undigitized documents like policies, contracts, and guidelines. Existing solutions fall short in making this data actionable and queryable.</p>
+              <div class="button-group">
+                <a href="#" class="link-button">Learn More</a>
+                <a href="#" class="link-button">
+                  <span class="play-icon">▶</span> Watch a Demo
+                </a>
+              </div>
+              <button class="trial-button">START A FREE TRIAL <span class="arrow">→</span></button>
+            </div>
+          </div>
+        </div>
+      
+        </section>
+      
+      <section class="pricing">
+        <h2>Popular Plans</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Free</h3>
+            <p>$0/month</p>
+            <ul>
+              <li>Basic contract analysis</li>
+              <li>Limited queries per month</li>
+              <li>Email support</li>
+              <li>Single user access</li>
+            </ul>
+            <button>Start Free</button>
+          </div>
+          <div class="pricing-card">
+            <h3>Contract Genius AI</h3>
+            <p>Pro Plan</p>
+            <ul>
+              <li>Advanced contract analysis</li>
+              <li>Unlimited queries</li>
+              <li>Priority support</li>
+              <li>Team collaboration</li>
+            </ul>
+            <button>Try Pro Plan</button>
+          </div>
+          <div class="pricing-card">
+            <h3>Query Genius AI</h3>
+            <p>Pro Plan</p>
+            <ul>
+              <li>Full feature access</li>
+              <li>Custom integrations</li>
+              <li>24/7 premium support</li>
+              <li>Enterprise solutions</li>
+            </ul>
+            <button>Contact Sales</button>
+          </div>
+        </div>
+      </section>
+      
+      <section class="cta">
+        <h2>Have a business?</h2>
+        <p>Let's get your free subscription started today!</p>
+        <button>Get Started</button>
+      </section>
+      
+      <footer>
+        <p>&copy; 2023 AI Contract Management. All rights reserved.</p>
+      </footer>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+          // Initialize the carousel with additional options
+          document.addEventListener('DOMContentLoaded', function() {
+              const carousel = new bootstrap.Carousel(document.querySelector('#carouselBanner'), {
+                  interval: 5000, // Time between slides in milliseconds
+                  wrap: true,     // Whether the carousel should cycle continuously
+                  pause: 'hover', // Pauses the carousel on mouseenter
+                  touch: true     // Whether the carousel should support left/right swipe interactions on touchscreen devices
+              });
+      
+              // Optional: Pause on button hover
+              const buttons = document.querySelectorAll('.banner-container .btn');
+              buttons.forEach(button => {
+                  button.addEventListener('mouseenter', () => {
+                      carousel.pause();
+                  });
+                  button.addEventListener('mouseleave', () => {
+                      carousel.cycle();
+                  });
+              });
+          });
+      
+          document.addEventListener('DOMContentLoaded', function() {
+              const glowButtons = document.querySelectorAll('.glow-button');
+      
+              glowButtons.forEach(button => {
+                  // Add hover state class for better mobile experience
+                  button.addEventListener('touchstart', function(e) {
+                      e.preventDefault();
+                      this.classList.add('hover');
+                  });
+      
+                  button.addEventListener('touchend', function(e) {
+                      e.preventDefault();
+                      this.classList.remove('hover');
+                  });
+              });
+          });
+      </script>
+      <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
+
