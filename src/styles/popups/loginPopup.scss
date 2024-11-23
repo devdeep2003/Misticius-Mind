@@ -1,6 +1,7 @@
 /* Overall container styling */
 .login-container {
-  width: 400px;
+  width: 450px;
+
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -8,9 +9,9 @@
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 40px;
-  margin: auto;
+  //margin: auto;
   font-family: "Plus Jakarta Sans", sans-serif;
-  margin-top: 100px;
+
 }
 
 /* Header */
@@ -19,13 +20,13 @@
   flex-direction: row;
   justify-content: flex-start;
   font-size: 18px;
-  gap: 25px;
+  gap: 35px;
   padding-left: 25px;
   padding-bottom: 8px;
 }
 
 .active-underline{
-  width: 6%;
+  width:90px;
   height: 3px;
   background-color: var(--active-color);
   position:absolute;
@@ -38,10 +39,15 @@
 }
 
 .close-button-login {
-  padding-left: 180px;
-  cursor: pointer;
+  width: 30px; /* Set a reasonable size */
   height: 30px;
-  width: 30px;
+  margin-left: 130px;
+  cursor: pointer;
+  transition: transform 0.3s; /* Add hover effect */
+}
+
+.close-button-login:hover {
+  transform: scale(1.1); /* Slight zoom-in effect */
 }
 
 div.active-tab-login {
@@ -60,50 +66,33 @@ div.active-tab-login {
 .login-title {
   padding-top: 20px;
   padding-bottom: 10px;
-  padding-left: 30px;
+  padding-left: 20px;
   text-align: left;
   font-size: 16px;
   margin-bottom: 20px;
   font-weight: 450;
   color: var(--text-color-black);
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 /* Input fields */
-.input-group {
-  position: relative;
-  margin-bottom: 15px;
-}
+
 
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-left: 15px;
+
 }
 
-.input-group input {
-  width: 320px;
-  padding: 8px 15px;
-  border: none;
-  border-radius: 50px;
-  height: 30px;
-  outline: none;
-  font-size: 14px;
-  background-color: #f2f2f2;
-}
 
-.eye-icon {
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #ccc;
-}
 
 /* Gradient button */
 .login-button {
-  width: 345px;
+  width: 320px;
+  margin-right: 30px;
   padding: 12px;
   border: none;
   border-radius: 25px;
@@ -113,6 +102,10 @@ div.active-tab-login {
   cursor: pointer;
   background: var(--background);
   margin-bottom: 20px;
+  :hover{
+    background: linear-gradient(to right,#565EF7 , #0108FF)
+
+  }
 }
 
 /* Footer text */
@@ -133,4 +126,22 @@ div.active-tab-login {
   margin-top: 5px;
   cursor: pointer;
   font-size: 14px;
+}
+
+/* Container for the input group */
+
+/* Eye icon styling */
+.eye-icon {
+  position: absolute;
+  transform: translateY(-50%); /* Center vertically */
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-right: 40px;
+  opacity: 0.7; /* Slightly transparent for better UI */
+  transition: opacity 0.3s ease;
+}
+
+.eye-icon:hover {
+  opacity: 1; /* Fully visible on hover */
 }

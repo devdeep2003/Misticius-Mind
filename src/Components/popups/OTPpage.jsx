@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import "../../styles/popups/otp.scss";
 import close from "/icons/XCircle.png";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CountdownTimer from "./timer";
 import { useState } from "react";
 import { EmailContext } from "../Context/Context";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = ({onClose , onSuccess}) => {
   const { email } = useContext(EmailContext);
 
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ const Login = () => {
     const enteredCode = code.join("");
     if (enteredCode === correctOtp) {
       setError(""); // Clear error if OTP is correct
-      navigate("/create-new-password");
+      onSuccess();
     } else {
       setError("Invalid OTP. Please try again."); // Set error if OTP is incorrect
     }
@@ -48,7 +48,7 @@ const Login = () => {
         >
           Enter Verification Code
         </span>
-        <img src={close} className="close-button-otp" />
+        <img src={close} className="close-button-otp" onClick={onClose} />
       </div>
       <div className="underline"></div>
       <p className="otp-title">
@@ -56,9 +56,10 @@ const Login = () => {
         below to continue.
       </p>
       <div className="form">
-        <div className="code-inputs">
+        <div className="code-inputs" style={{ gap: "10px" }}>
           {code.map((digit, index) => (
             <input
+              style={{ height: "50px", width: "50px" }}
               key={index}
               id={`code-${index}`}
               type="text"
@@ -72,7 +73,11 @@ const Login = () => {
 
         {error && <div className="incorrect-otp">{error}</div>}
 
-        <button className="login-button" onClick={handleVerifyOTP}>
+        <button
+          className="login-button"
+          onClick={handleVerifyOTP}
+          style={{ marginLeft: "30px" }}
+        >
           VERIFY CODE
         </button>
 

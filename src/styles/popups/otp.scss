@@ -30,10 +30,15 @@
   }
   
   .close-button-otp {
-    padding-left: 140px;
-    cursor: pointer;
+    width: 30px; /* Set a reasonable size */
     height: 30px;
-    width: 30px;
+    margin-left: 60px;
+    cursor: pointer;
+    transition: transform 0.3s; /* Add hover effect */
+  }
+  
+  .close-button-otp:hover {
+    transform: scale(1.1); /* Slight zoom-in effect */
   }
   
   div.active-tab-otp {

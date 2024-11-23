@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import '../../styles/popups/signupPopup.scss';
 import close from '/icons/XCircle.png'
-import {Link} from 'react-router-dom';
 
-const SignUp = () => {
+
+
+const SignUp = ({onLogin , onClose}) => {
   const [formData, setFormData] = useState({
     firstName: '',
     secondName: '',
@@ -27,9 +28,9 @@ const SignUp = () => {
   return (
     <div className="signup-container">
       <div className="form-header">
-       <Link to ='/login' style={{textDecoration:"none" , color:"#000000"}}> <span>Login</span></Link>
-        <span className="active-tab">Sign Up</span>
-        <img src={close} className='close-button'/>
+      <span onClick = {onLogin}>Login</span>
+       <span className="active-tab">Sign Up</span>
+       <a href="/"> <img src={close} className='close-button-signup' onClick={onClose} style={{marginLeft:"400px"}}/></a>
       </div>
       <div className="active-underline-signup"></div>
       <div className="underline"></div>
@@ -37,13 +38,14 @@ const SignUp = () => {
 
       <form onSubmit={handleSubmit}>
         
-        <div className="form-grid">
+        <div className="form-grid" >
           <input
             type="text"
             name="firstName"
             placeholder="First Name"
             value={formData.firstName}
             onChange={handleChange}
+            style={{height:"45px"}}
           />
           <input
             type="text"
@@ -51,6 +53,7 @@ const SignUp = () => {
             placeholder="Second Name"
             value={formData.secondName}
             onChange={handleChange}
+            style={{height:"45px"}}
           />
           <input
             type="email"
@@ -58,6 +61,7 @@ const SignUp = () => {
             placeholder="Email ID"
             value={formData.email}
             onChange={handleChange}
+            style={{height:"45px"}}
           />
           <input
             type="text"
@@ -65,6 +69,7 @@ const SignUp = () => {
             placeholder="Company Name"
             value={formData.companyName}
             onChange={handleChange}
+            style={{height:"45px"}}
           />
           <input
             type="text"
@@ -72,6 +77,7 @@ const SignUp = () => {
             placeholder="Location"
             value={formData.location}
             onChange={handleChange}
+            style={{height:"45px"}}
           />
           <input
             type="text"
@@ -79,17 +85,21 @@ const SignUp = () => {
             placeholder="Country"
             value={formData.country}
             onChange={handleChange}
+            style={{height:"45px"}}
           />
         </div>
         <button type="submit" className="signup-button">
           SIGN UP
         </button>
-        <p>
-          Already have an account? <Link to="/login">Login</Link>
+        <p style={{paddingBottom:"30px"}}>
+          Already have an account? <span onClick={onLogin} style={{cursor:"pointer" , color:"blue"}}>Login</span>
         </p>
       </form>
     </div>
   );
 };
+
+
+
 
 export default SignUp;

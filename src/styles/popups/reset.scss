@@ -30,10 +30,15 @@
   }
   
   .close-button-reset {
-    padding-left: 140px;
-    cursor: pointer;
+    width: 30px; /* Set a reasonable size */
     height: 30px;
-    width: 30px;
+    margin-left: 50px;
+    cursor: pointer;
+    transition: transform 0.3s; /* Add hover effect */
+  }
+  
+  .close-button-reset:hover {
+    transform: scale(1.1); /* Slight zoom-in effect */
   }
   
   div.active-tab-reset {
@@ -58,6 +63,7 @@
     font-weight: 550;
     text-align: left;
     color: var(--text-color-black);
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
   
   /* Input fields */
@@ -84,14 +90,7 @@
     background-color: #f2f2f2;
   }
   
-  .eye-icon {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #ccc;
-  }
+ 
   
   /* Gradient button */
   .reset-button {
@@ -105,6 +104,7 @@
     cursor: pointer;
     background: var(--background);
     margin-bottom: 20px;
+
   }
   
   /* Footer text */
@@ -115,6 +115,7 @@
     padding-bottom: 20px;
     text-decoration: none !important;
     color: #3637D4;
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
   
   .signup-link {

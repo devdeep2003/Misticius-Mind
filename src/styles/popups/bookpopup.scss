@@ -1,7 +1,7 @@
 .bookappointment-container {
     width: 680px;
-    margin: 50px auto;
-    margin-top: 100px;
+    margin-left: -130px;
+    margin-top: 50px;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -19,13 +19,16 @@
     padding-bottom: 5px;
 
   }
-
-  .close-button
-  {
-    padding-left: 370px;
-    cursor: pointer;
+  .close-button-book {
+    width: 30px; /* Set a reasonable size */
     height: 30px;
-    width: 30px;
+    margin-left: 330px;
+    cursor: pointer;
+    transition: transform 0.3s; /* Add hover effect */
+  }
+  
+  .close-button-book:hover {
+    transform: scale(1.1); /* Slight zoom-in effect */
   }
 
   .active-tab
@@ -65,6 +68,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
+    padding-bottom: 10px;
   }
   
   input {
@@ -96,11 +100,12 @@
 
   
   .bookappointment-button {
-    width: 650px;
+    width: 610px;
     padding: 10px;
     background: var(--background);
     color: white;
     border: none;
+    margin-bottom: 20px;
     margin-top: 18px;
     margin-left: 14px;
     border-radius: 20px;

@@ -1,28 +1,24 @@
-import {React,useContext} from "react";
+import { React, useContext } from "react";
 import "../../styles/popups/reset.scss";
-import close from "/icons/XCircle.png";
-import {Link} from 'react-router-dom'
 import { EmailContext } from "../Context/Context";
 
-const Login = () => {
-
+const Reset = ({ onLogin, onSubmit, onClose }) => {
   const { email, setEmail } = useContext(EmailContext); // Access context values
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value); // Update email in context
   };
 
-
   return (
     <div className="reset-container">
       <div className="reset-header">
         <span
           className="active-tab-login"
-          style={{ color: "#3637d4", fontWeight: "bold" , textWrap:"nowrap"}}
+          style={{ color: "#3637d4", fontWeight: "bold", textWrap: "nowrap" }}
         >
           Reset Your Password
         </span>
-        <img src={close} className="close-button-reset" />
+        <img src="/icons/XCircle.png" className="close-button-reset" onClick={onClose} />
       </div>
       <div className="underline"></div>
       <p className="reset-title">
@@ -31,18 +27,30 @@ const Login = () => {
       </p>
       <div className="form">
         <div className="input-group">
-          <input type="text" placeholder="Your email" value={email} onChange={handleEmailChange}/>
+          <input
+            style={{ height: "45px", marginLeft: "-5px" }}
+            type="text"
+            placeholder="Your email"
+            value={email}
+            onChange={handleEmailChange}
+          />
         </div>
 
-       <Link to='/otp-verification'> <button className="login-button">SEND CODE</button></Link>
+        <button
+          className="login-button"
+          onClick={onSubmit}
+          style={{ marginLeft: "30px" }}
+        >
+          SEND CODE
+        </button>
         <div className="footer-text">
-          
-            <p><Link to="/login">Back to Login</Link></p>
-          
+          <p onClick={onLogin} style={{ cursor: "pointer" }}>
+          <a href="/login">  Back to Login </a>
+          </p>
         </div>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Reset;

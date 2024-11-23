@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../styles/popups/bookpopup.scss";
-import close from "/icons/XCircle.png";
+
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ const SignUp = () => {
     <div className="bookappointment-container">
       <div className="form-header">
         <span className="active-tab">Book an Appointment</span>
-        <img src={close} className="close-button" />
+       <a href="/"> <img src="../../../public/icons/XCircle.png" className="close-button-book" /></a>
       </div>
       <div className="underline"></div>
       <span className="form-heading">
@@ -36,6 +36,7 @@ const SignUp = () => {
       <form onSubmit={handleSubmit}>
         <div className="form-grid">
           <input
+          style={{height:"45px"}}
             type="text"
             name="firstName"
             placeholder="First Name"
@@ -43,6 +44,7 @@ const SignUp = () => {
             onChange={handleChange}
           />
           <input
+          style={{height:"45px"}}
             type="text"
             name="secondName"
             placeholder="Last Name"
@@ -50,6 +52,7 @@ const SignUp = () => {
             onChange={handleChange}
           />
           <input
+          style={{height:"45px"}}
             type="email"
             name="email"
             placeholder="Email ID"
@@ -57,6 +60,7 @@ const SignUp = () => {
             onChange={handleChange}
           />
           <input
+          style={{height:"45px"}}
             type="text"
             name="companyName"
             placeholder="Phone Number"
@@ -80,5 +84,7 @@ const SignUp = () => {
     </div>
   );
 };
+
+
 
 export default SignUp;
