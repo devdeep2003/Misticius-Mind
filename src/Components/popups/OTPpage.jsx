@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "../../styles/popups/otp.scss";
 import close from "/icons/XCircle.png";
 import { Link } from "react-router-dom";
-import CountdownTimer from "./timer";
+import CountdownTimer from "./Timer";
 import { useState } from "react";
 import { EmailContext } from "../Context/Context";
 import { useNavigate } from "react-router-dom";

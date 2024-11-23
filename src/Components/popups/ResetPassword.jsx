@@ -29,7 +29,7 @@ const Reset = ({ onLogin, onSubmit, onClose }) => {
         <div className="input-group">
           <input
             style={{ height: "45px", marginLeft: "-5px" }}
-            type="text"
+            type="email"
             placeholder="Your email"
             value={email}
             onChange={handleEmailChange}
